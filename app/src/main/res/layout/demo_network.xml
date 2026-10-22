@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loopback HTTPS endpoint"
+        android:textColor="@color/vd_text"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/networkEndpoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_code"
+        android:fontFamily="monospace"
+        android:padding="14dp"
+        android:text="starting local TLS server…"
+        android:textColor="@color/vd_primary"
+        android:textIsSelectable="true"
+        android:textSize="11.5sp" />
+
+    <TextView
+        android:id="@+id/networkCertInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Certificate: self-signed, CN=127.0.0.1, SAN IP:127.0.0.1 · not in Android's trust store"
+        android:textColor="@color/vd_text_faint"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/networkSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="SEND HTTPS REQUEST"
+        style="@style/VdButton" />
+
+    <TextView
+        android:id="@+id/networkOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_code"
+        android:fontFamily="monospace"
+        android:padding="14dp"
+        android:textColor="@color/vd_primary"
+        android:textIsSelectable="true"
+        android:textSize="11.5sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/networkModeNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/vd_text_faint"
+        android:textSize="11sp"
+        android:lineSpacingExtra="3dp" />
+</LinearLayout>

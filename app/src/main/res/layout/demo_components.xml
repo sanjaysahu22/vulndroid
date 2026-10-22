@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProfileActivity is the demonstration component. It shows demo account data and returns it to a caller that launched it for a result."
+        android:textColor="@color/vd_text_muted"
+        android:textSize="13sp"
+        android:lineSpacingExtra="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="REQUESTED USER ID"
+        style="@style/VdSectionLabel" />
+
+    <EditText
+        android:id="@+id/componentsUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="1 = alice, 2 = bob, 3 = carol"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="1"
+        style="@style/VdInput" />
+
+    <Button
+        android:id="@+id/componentsOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="OPEN PROFILE IN THIS APP"
+        style="@style/VdButton" />
+
+    <Button
+        android:id="@+id/componentsAttacker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="OPEN VULNDROID ATTACKER"
+        style="@style/VdButtonSecondary" />
+
+    <TextView
+        android:id="@+id/componentsModeNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/vd_text_faint"
+        android:textSize="11sp"
+        android:lineSpacingExtra="3dp" />
+</LinearLayout>

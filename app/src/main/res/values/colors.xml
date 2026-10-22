@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vd_bg">#07111F</color>
+    <color name="vd_bg_deep">#040A13</color>
+    <color name="vd_surface">#0F1B2D</color>
+    <color name="vd_surface_alt">#142238</color>
+    <color name="vd_surface_high">#1A2C44</color>
+    <color name="vd_border">#22344D</color>
+    <color name="vd_border_soft">#18283D</color>
+
+    <color name="vd_primary">#22D3EE</color>
+    <color name="vd_primary_deep">#0891B2</color>
+    <color name="vd_primary_bg">#0B2C38</color>
+    <color name="vd_secondary">#A78BFA</color>
+    <color name="vd_secondary_bg">#211B3A</color>
+
+    <color name="vd_red">#F87171</color>
+    <color name="vd_red_bg">#35141D</color>
+    <color name="vd_red_border">#5C2230</color>
+    <color name="vd_green">#34D399</color>
+    <color name="vd_green_bg">#0D2B24</color>
+    <color name="vd_green_border">#1D4D40</color>
+    <color name="vd_amber">#FBBF24</color>
+    <color name="vd_amber_bg">#2E240C</color>
+    <color name="vd_amber_border">#554114</color>
+
+    <color name="vd_text">#E8F0FA</color>
+    <color name="vd_text_muted">#9FB0C7</color>
+    <color name="vd_text_faint">#6C7F99</color>
+    <color name="vd_white">#FFFFFF</color>
+    <color name="vd_black">#000000</color>
+    <color name="vd_code_bg">#08131F</color>
+
+    <color name="vd_transparent">#00000000</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Deliberately exported and unprotected for the components lab. -->
+        <activity
+            android:name=".labs.components.ProfileActivity"
+            android:exported="true"
+            android:label="VulnDroid Demo Profile" />
+
+        <!-- Deliberately unverified custom scheme for the deep-link lab. -->
+        <activity
+            android:name=".labs.deeplinks.DeepLinkActivity"
+            android:exported="true"
+            android:label="VulnDroid Deep Link">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="profile"
+                    android:scheme="vulndroid" />
+                <data
+                    android:host="admin"
+                    android:scheme="vulndroid" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

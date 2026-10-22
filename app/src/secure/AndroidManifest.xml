@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Hardened: no external caller, plus a session check inside the activity. -->
+        <activity
+            android:name=".labs.components.ProfileActivity"
+            android:exported="false"
+            android:label="VulnDroid Demo Profile" />
+
+        <!-- Hardened: only a verified HTTPS App Link route, with no custom scheme. -->
+        <activity
+            android:name=".labs.deeplinks.DeepLinkActivity"
+            android:autoVerify="true"
+            android:exported="true"
+            android:label="VulnDroid Deep Link">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vulndroid.example"
+                    android:pathPrefix="/profile"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

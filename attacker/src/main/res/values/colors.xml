@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="atk_bg">#120A0D</color>
+    <color name="atk_surface">#201216</color>
+    <color name="atk_border">#42232A</color>
+    <color name="atk_red">#FB7185</color>
+    <color name="atk_red_bright">#F43F5E</color>
+    <color name="atk_text">#F8EDEF</color>
+    <color name="atk_muted">#C9A8AE</color>
+    <color name="atk_faint">#8E6E75</color>
+    <color name="atk_code">#180D11</color>
+</resources>

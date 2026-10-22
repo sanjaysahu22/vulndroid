@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_back">Back</string>
+    <string name="dashboard_title">Mobile Application\nSecurity Lab</string>
+    <string name="dashboard_subtitle">Five hands-on Android vulnerability labs with real tests, attack paths, and hardened counterparts.</string>
+    <string name="build_vulnerable">VULNERABLE BUILD</string>
+    <string name="build_secure">SECURE BUILD</string>
+    <string name="safety_notice">Training use only. Install this app on an emulator or dedicated test device. All accounts, tokens, and secrets are fake.</string>
+    <string name="labs_heading">LABS</string>
+    <string name="field_kit_heading">FIELD KIT</string>
+    <string name="field_kit_text">Test the same findings with JADX, MobSF, ADB, and Burp Suite. Commands and expected evidence live inside every lab.</string>
+    <string name="open_report">VIEW SECURITY REPORT</string>
+    <string name="open_about">ABOUT &amp; SAFETY</string>
+    <string name="section_intro">01 / INTRODUCTION</string>
+    <string name="section_vulnerability">02 / VULNERABILITY</string>
+    <string name="section_demo">03 / HANDS-ON DEMONSTRATION</string>
+    <string name="section_testing">04 / TEST IT YOURSELF</string>
+    <string name="section_observed">05 / OBSERVED RESULT</string>
+    <string name="section_secure">06 / SECURE IMPLEMENTATION</string>
+    <string name="section_summary">07 / LEARNING SUMMARY</string>
+    <string name="run_retest">RUN RETEST</string>
+    <string name="running_test">Running test…</string>
+    <string name="status_not_tested">NOT TESTED</string>
+    <string name="status_vulnerable">VULNERABLE</string>
+    <string name="status_fixed">FIXED</string>
+    <string name="status_inconclusive">INCONCLUSIVE</string>
+    <string name="observed_empty">No test has run in this build yet. Perform the demonstration, then run the test to record real evidence.</string>
+    <string name="evidence_label">EVIDENCE</string>
+    <string name="report_title">Security Report</string>
+    <string name="report_subtitle">Live lab results from this installation</string>
+    <string name="share_report">SHARE REPORT</string>
+    <string name="about_title">About VulnDroid</string>
+    <string name="attacker_launch">OPEN ATTACKER APP</string>
+</resources>

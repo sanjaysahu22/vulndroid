@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo sign-in"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/vd_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Use alice / demo123. Every token in this app is fake."
+        android:textSize="13sp"
+        android:textColor="@color/vd_text_muted" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="USERNAME"
+        style="@style/VdSectionLabel" />
+
+    <EditText
+        android:id="@+id/storageUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="alice"
+        android:inputType="text"
+        android:singleLine="true"
+        style="@style/VdInput" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="PASSWORD"
+        style="@style/VdSectionLabel" />
+
+    <EditText
+        android:id="@+id/storagePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="demo123"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        style="@style/VdInput" />
+
+    <Button
+        android:id="@+id/storageSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="SIGN IN &amp; WRITE SESSION"
+        style="@style/VdButton" />
+
+    <TextView
+        android:id="@+id/storageLoginMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:textColor="@color/vd_primary" />
+
+    <LinearLayout
+        android:id="@+id/storageProfileCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_card_soft">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RECOVERED PROFILE"
+            style="@style/VdSectionLabel" />
+
+        <TextView
+            android:id="@+id/storageProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/vd_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/storageProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/vd_text_muted"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/storageProfileBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/vd_text_muted"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="DEMO TOKEN"
+            style="@style/VdSectionLabel" />
+
+        <TextView
+            android:id="@+id/storageProfileToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/vd_primary"
+            android:textSize="13sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:id="@+id/storageProfileNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/vd_text_faint"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/storageInspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="INSPECT APP-PRIVATE STORAGE"
+        style="@style/VdButtonSecondary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="The inspector reads this app's own sandbox. On a debuggable build, adb run-as does the same thing without an in-app screen."
+        android:textColor="@color/vd_text_faint"
+        android:textSize="11sp" />
+</LinearLayout>

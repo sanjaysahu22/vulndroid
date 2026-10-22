@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/atk_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_attacker"
+                android:contentDescription="Attacker" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VULNDROID ATTACKER"
+                    android:textColor="@color/atk_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="authorized test tool"
+                    android:textColor="@color/atk_faint"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LAB ONLY"
+                android:background="@drawable/bg_code"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/atk_red"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This app attacks only the VulnDroid packages installed on this test device. It demonstrates an exported activity and a competing deep-link handler. Do not repurpose it."
+                android:textColor="@color/atk_muted"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="TARGET"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/atk_faint"
+            android:textSize="10sp"
+            android:letterSpacing="0.14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/bg_card">
+
+            <RadioGroup
+                android:id="@+id/attackerTargetGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/targetVuln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:buttonTint="@color/atk_red"
+                    android:text="VulnDroid (vulnerable)\ncom.vulndroid.app"
+                    android:textColor="@color/atk_text"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/targetSecure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/atk_red"
+                    android:text="VulnDroid Secure\ncom.vulndroid.app.secure"
+                    android:textColor="@color/atk_text"
+                    android:textSize="12sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="01 / EXPORTED COMPONENT"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/atk_faint"
+            android:textSize="10sp"
+            android:letterSpacing="0.14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start ProfileActivity explicitly with startActivityForResult. The vulnerable target returns demo profile data; the secure target should block the call at the OS boundary."
+                android:textColor="@color/atk_muted"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp" />
+
+            <Button
+                android:id="@+id/attackerLaunchProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="LAUNCH PROFILE ACTIVITY"
+                style="@style/AtkButton" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="02 / DEEP LINK HIJACK"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/atk_faint"
+            android:textSize="10sp"
+            android:letterSpacing="0.14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This app registers vulndroid:// too. Send a link, pick this app in the chooser, and watch the URI land here instead of in the victim. Forward it to show that captured parameters can be relayed."
+                android:textColor="@color/atk_muted"
+                android:textSize="12sp"
+                android:lineSpacingExtra="3dp" />
+
+            <Button
+                android:id="@+id/attackerSendLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="SEND VULNDROID LINK"
+                style="@style/AtkButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="CAPTURED URI"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/atk_faint"
+                android:textSize="10sp"
+                android:letterSpacing="0.12" />
+
+            <TextView
+                android:id="@+id/attackerCaptured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_code"
+                android:fontFamily="monospace"
+                android:padding="12dp"
+                android:text="none yet — send a link and choose this app"
+                android:textColor="@color/atk_red"
+                android:textIsSelectable="true"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/attackerForwardLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="FORWARD CAPTURED LINK TO VICTIM"
+                style="@style/AtkButtonSecondary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="ACTIVITY LOG"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/atk_faint"
+            android:textSize="10sp"
+            android:letterSpacing="0.14" />
+
+        <TextView
+            android:id="@+id/attackerLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_code"
+            android:fontFamily="monospace"
+            android:minHeight="120dp"
+            android:padding="14dp"
+            android:text="Ready. Select a target, then run a test."
+            android:textColor="@color/atk_text"
+            android:textIsSelectable="true"
+            android:textSize="11sp"
+            android:lineSpacingExtra="3dp" />
+
+        <Button
+            android:id="@+id/attackerClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="CLEAR LOG"
+            style="@style/AtkButtonSecondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="monospace"
+            android:text="Only com.vulndroid.app / com.vulndroid.app.secure\non a dedicated emulator or test device."
+            android:textColor="@color/atk_faint"
+            android:textSize="10sp"
+            android:lineSpacingExtra="3dp" />
+    </LinearLayout>
+</ScrollView>
